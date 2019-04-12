@@ -4,7 +4,7 @@ jQuery(document).ready(function () {
 });
 // 192.168.244.76 Local
 // 192.168.244.85 Server Pro
-$globalUrl = "http://127.0.0.1/rest-api-amb-slim-dispositivos/public/";
+$globalUrl = "http://192.168.244.85/rest-api-amb-slim-dispositivos/public/";//192.168.244.85
 $IdPropia = 0;
 //$.md5('value');
 //confirm('Some message');
