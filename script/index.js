@@ -23,7 +23,6 @@ function loginTecnico() {
             $('#mensajes').text('Error haciendo login');
         }
     });
-
 }
 
 function cargarDispositivos() {
