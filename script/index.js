@@ -1,16 +1,10 @@
 jQuery(document).ready(function () {
-    /*$('#login').prop("disabled", true);
-    cargarDispositivos();*/
+
 });
-// 192.168.244.76 Local
-// 192.168.244.85 Server Pro
-$globalUrl = "http://192.168.244.85/rest-api-amb-slim-dispositivos/public/";//192.168.244.85
+
+$globalUrl = "http://192.168.244.85/rest-api-amb-slim-dispositivos/public/";
 $IdPropia = 0;
-//$.md5('value');
-//confirm('Some message');
 
-
-//var ping = new Date; $.ajax({ type: "POST", url: "server.php", data: {}, cache:false, success: function(output){ ping = new Date - ping; } });
 function loginTecnico() {
     $.ajax({
         url: $globalUrl + 'login/',
@@ -26,9 +20,10 @@ function loginTecnico() {
             }
         },
         error: function () {
-            $('#mensajes').text('Error carrgando lista');
+            $('#mensajes').text('Error haciendo login');
         }
     });
+
 }
 
 function cargarDispositivos() {
@@ -90,12 +85,6 @@ function cargarDispositivos() {
                         });
                     });
 
-                    /*$.each(respuesta["datos"], function (i, v) {
-                        $("#contenido").append('<div class="opcion" id="dispositivo'+v["id"]+'"><div><b>Nombre:</b> '+v["nombre"]+'&nbsp;&nbsp;&nbsp;&nbsp;<b>Tipo:</b> '+v["tipo"]+
-                            ' </div><div><b>IP:</b> '+v["ip"]+'&nbsp;&nbsp;&nbsp;&nbsp;<b>Ubicacion:</b> '+v["ubicacion"]+'</div>'+
-                            '<button type="button" id="'+v["id"]+'" onclick="obtenerDispositivo('+v["id"]+')">Editar</button> ' +
-                            '<button type="button" id="'+v["id"]+'" onclick="obtenerHistorialDispositivo('+v["id"]+')">Historial</button></div>');
-                    });*/
                 });
                 $("#contenedor").fadeIn(100);
             } else {
@@ -103,7 +92,7 @@ function cargarDispositivos() {
             }
         },
         error: function () {
-            $('#mensajes').text('Error carrgando lista');
+            $('#mensajes').text('Error cargando lista');
         }
     });
 }
@@ -143,7 +132,7 @@ function obtenerDispositivo($id) { // el detalle del dispositivo para editar
             }
         },
         error: function () {
-            $('#mensajes').text('Error carrgando Dispositivo');
+            $('#mensajes').text('Error cargando Dispositivo');
         }
     });
 }
@@ -235,7 +224,7 @@ function eliminarDispositivo($id) {
     }
 }
 
-function obtenerHistorialDispositivo($id) { // mostrara la lista de hisotriales de un dispositivo
+function obtenerHistorialDispositivo($id) { // mostrara la lista de historiales de un dispositivo
     $.ajax({
         url: $globalUrl + 'historico_dispositivo/' + $id,
         type: 'GET',
@@ -273,7 +262,7 @@ function obtenerHistorialDispositivo($id) { // mostrara la lista de hisotriales 
             }
         },
         error: function () {
-            $('#mensajes').text('Error carrgando Dispositivo');
+            $('#mensajes').text('Error cargando Dispositivo');
         }
     });
 }
@@ -361,7 +350,7 @@ function obtenerHistorico($id, $fromDis) { // detalle del historico
             }
         },
         error: function () {
-            $('#mensajes').text('Error carrgando Dispositivo');
+            $('#mensajes').text('Error cargando Dispositivo');
         }
     });
 }
@@ -509,10 +498,7 @@ function obtenerHistorialTecnico($id) { // mostrara la lista de hisotriales de u
             });
         },
         error: function () {
-            $('#mensajes').text('Error carrgando Dispositivo');
+            $('#mensajes').text('Error cargando Dispositivo');
         }
     });
 }
-
-
-//Locura

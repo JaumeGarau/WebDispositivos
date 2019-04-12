@@ -131,7 +131,6 @@ divTableRow button {
 }
 
 a, a:visited {
-    /*text-shadow: -0.2px -0.2px 0.1px #000, 0.2px 0.2px 0.1px #000, -0.2px 0.2px 0.1px #000, 0.2px -0.2px 0.1px #000;*/
     color: darkblue;
     text-decoration: none;
 }
